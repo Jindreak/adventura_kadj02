@@ -1,4 +1,4 @@
-/* Soubor je ulozen v kodovani UTF-8.
+/* Soubor je ulozen v kodovani UTF-8.dslkaslkdj;salkjd;lkasjd;klasj;lkd
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package com.github.Jindreak.adventura_kadj02.main;
 
