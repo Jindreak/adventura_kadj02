@@ -8,12 +8,16 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Jindreak.adventura_kadj02.ui.HomeController">
   <columnConstraints>
@@ -30,9 +34,10 @@
    <children>
       <MenuBar prefHeight="25.0" prefWidth="220.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Hra">
             <items>
               <MenuItem mnemonicParsing="false" text="Nova hra" />
+                  <MenuItem mnemonicParsing="false" text="Napoveda" />
                   <MenuItem mnemonicParsing="false" text="Konec" />
             </items>
           </Menu>
@@ -52,7 +57,17 @@
             <TextField fx:id="vstupniText" onAction="#odesliPrikaz">
                <VBox.margin>
                   <Insets />
-               </VBox.margin></TextField>
+               </VBox.margin>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></TextField>
             <Label text="Batoh" />
             <ListView prefHeight="200.0" prefWidth="200.0">
                <VBox.margin>
@@ -64,20 +79,33 @@
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
          <children>
             <Label text="Vychody" />
-            <TextArea prefHeight="98.0" prefWidth="221.0" />
+            <ListView fx:id="vychody" prefHeight="200.0" prefWidth="200.0" />
             <Label prefHeight="17.0" prefWidth="45.0" text="Postavy" />
-            <TextArea prefHeight="106.0" prefWidth="221.0" />
+            <ListView fx:id="postavy" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <children>
             <Label text="Veci" />
-            <ListView prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="veci" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </VBox>
-      <VBox prefHeight="200.0" prefWidth="227.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <TextArea fx:id="vystup" editable="false" prefHeight="198.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" />
-      <Label text="Console" GridPane.columnIndex="1" />
+      <TextArea fx:id="vystup" editable="false" prefHeight="198.0" prefWidth="211.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <font>
+            <Font name="Courier New" size="12.0" />
+         </font>
+      </TextArea>
+      <Label text="Console" GridPane.columnIndex="1">
+         <font>
+            <Font name="Courier New Bold" size="16.0" />
+         </font></Label>
+      <ImageView fx:id="pozice" fitHeight="57.0" fitWidth="26.0" opacity="0.78" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+         <image>
+            <Image url="@pozice.png" />
+         </image>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </ImageView>
    </children>
 </GridPane>

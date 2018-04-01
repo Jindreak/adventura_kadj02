@@ -223,6 +223,27 @@ public class Prostor {
         return Collections.unmodifiableCollection(vychody);
     }
     
+    /**
+     * Vrací veci v prostoru, ktere nedaji modifikovat kvuli
+     * zapozdreni.
+     *
+     * @return Veci, ktere se nachazi v prostoru. Nelze modifikovat
+     */
+    public Map<String, Vec> getVeci() {
+        return Collections.unmodifiableMap(veci);
+    }
+    
+    /**
+     * Vrací veci v prostoru ktere nedaji modifikovat kvuli
+     * zapouzdreni.
+     *
+     * @return Veci, ktere se nachazi v prostoru. Nelze modifikovat
+     */
+    public Map<String, Postava> getPostavy() {
+        return Collections.unmodifiableMap(postavy);
+    }
+    
+    
      /**
      * Vklada vec do prostoru
      *
