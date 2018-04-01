@@ -40,8 +40,8 @@ public class Hra implements IHra {
     public String vratUvitani() {
         return "Probouzíte se ze stavu stáze a první pohled vás šokuje.\n" +
                "Podlaha lodi je zaplněna mrtvými těly a spoustou zaschlé krve.\n" +
-               "Je jasné, že se zde udála strašlivá šarvátka, ale proč nikdo nepoužil laserové zbraně?\n" +
-               "Nevzpomínáte si na nic od doby, kdy jste byl naverbován do legionářského útvaru jako vědec.\n" +
+               "Je jasné, že se zde udála strašlivá šarvátka,\n ale proč nikdo nepoužil laserové zbraně?\n" +
+               "Nevzpomínáte si na nic od doby, kdy jste byl naverbován\n do legionářského útvaru jako vědec.\n" +
                "Váš úkol je v této chvíli jasný – zjistit co se stalo.\n" +
                "============================================\n" +
                "Napište 'napoveda', pokud si nevíte rady, jak hrát dál.\n" +
