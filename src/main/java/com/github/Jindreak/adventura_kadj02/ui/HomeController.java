@@ -32,12 +32,16 @@ public class HomeController extends GridPane {
 	@FXML private TextArea vystup;
 	@FXML private ListView postavy;
 	@FXML private ImageView pozice;
+	@FXML private ImageView emp;
+	@FXML private ImageView temna;
 
 	private IHra hra;
 	private Subject subject;
 	private IObserver vychodyObs;
 	private IObserver veciObs;
 	private IObserver postavyObs;
+	private IObserver batohObs;
+	private IObserver mapaObs;
 	
 	/**
 	 * metoda čte příkaz ze vstupního textového pole
@@ -72,20 +76,23 @@ public class HomeController extends GridPane {
 		vychodyObs = new vychodyObserver(this);
 		veciObs = new veciObserver(this);
 		postavyObs = new postavyObserver(this);
+		batohObs = new batohObserver(this);
+		mapaObs = new mapaObserver(this);
 		
 		subject.register(vychodyObs);
 		subject.register(veciObs);
 		subject.register(postavyObs);
+		subject.register(batohObs);
+		subject.register(mapaObs);
 		
 		
 		subject.notifyObserver();
 		
 		
-		pozice.setFocusTraversable(true);
-		pozice.setLayoutX (2000);
-		pozice.setLayoutY(3000);
-		pozice.setX (2000);
-		pozice.setY(3000);
+		
+		
+		pozice.setTranslateX(95);
+		pozice.setTranslateY(10);
 		
 	}
 	
@@ -114,6 +121,68 @@ public class HomeController extends GridPane {
 	
 	public void pridejPostavu (String nazevPostavy) {
 		postavy.getItems().add(nazevPostavy);
+	}
+	
+	public void smazBatoh () {
+		
+		emp.setVisible(false);
+		temna.setVisible(false);
+		
+	}
+	
+	public void pridejBatoh (String nazevItemu) {
+		
+		switch (nazevItemu) {
+		
+		case "emp_granát": emp.setVisible(true);
+		break;
+		
+		case "baterie_s_temnou_energií": temna.setVisible(true);
+		break;
+		}
+		
+	}
+	
+	public void zmenPozici (String nazevPozice) {
+		
+		switch (nazevPozice) {
+			case "stázové_komory" : 	pozice.setTranslateX(95);
+										pozice.setTranslateY(10);
+										break;
+									
+			case "transportér" 	:		pozice.setTranslateX(20);
+										pozice.setTranslateY(40);
+										break;
+									
+			case "strojovna"	:		pozice.setTranslateX(170);
+										pozice.setTranslateY(40);
+										break;
+									
+			case "chodba_s_obranou":	pozice.setTranslateX(95);
+										pozice.setTranslateY(-90);
+										break;
+									
+			case "spojovací_chodba":	pozice.setTranslateX(95);
+										pozice.setTranslateY(-135);
+										break;
+									
+			case "přetlaková_komora":	pozice.setTranslateX(20);
+										pozice.setTranslateY(-135);
+										break;
+										
+			case "sklad" :				pozice.setTranslateX(170);
+										pozice.setTranslateY(-135);
+										break;
+										
+			case "můstek" :				pozice.setTranslateX(95);
+										pozice.setTranslateY(-175);
+										break;
+										
+			case "chodba" :				pozice.setTranslateX(95);
+										pozice.setTranslateY(-135);
+										break;
+										
+		}
 	}
 
 }

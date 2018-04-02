@@ -5,29 +5,28 @@ import java.util.Map;
 import com.github.Jindreak.adventura_kadj02.logika.Batoh;
 import com.github.Jindreak.adventura_kadj02.logika.Postava;
 import com.github.Jindreak.adventura_kadj02.logika.Prostor;
+import com.github.Jindreak.adventura_kadj02.logika.Vec;
 
-
-public class postavyObserver implements IObserver {
-
+public class batohObserver implements IObserver {
+	
 	
 	private HomeController c;
 	
-	postavyObserver (HomeController controller){
+	batohObserver (HomeController controller) {
 		c = controller;
 	}
 	
-	
-	
+
 	@Override
 	public void update(Prostor p, Batoh b) {
-		Map<String, Postava> postavy = p.getPostavy();
 		
+		Map<String, Vec> batoh = b.getBatoh();
 		
+		c.smazBatoh();
 		
-		c.smazPostavy();
-		
-		for (String nazev : postavy.keySet()) {
-            c.pridejPostavu(nazev);
+		for (String nazev : batoh.keySet()) {
+            c.pridejBatoh(nazev);
+            
         }
 		
 	}

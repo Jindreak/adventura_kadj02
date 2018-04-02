@@ -96,6 +96,16 @@ public class Batoh {
     }
     
     /**
+     * Preda nemodifikovatelnou kolekci batohu
+     * 
+     * @return nemodifikovatelny batoh - kolekce
+     */
+    public Map<String, Vec> getBatoh(){
+    	return Collections.unmodifiableMap(seznam);
+    }
+    
+    
+    /**
      * Zkoumá, zdali je batoh plný
      *
      * @return vrací boolean v závislosti, zdali je batoh plný
