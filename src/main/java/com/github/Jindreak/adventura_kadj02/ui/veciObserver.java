@@ -7,11 +7,19 @@ import com.github.Jindreak.adventura_kadj02.logika.Vec;
 
 import java.util.Map;
 
-
+/**
+ * Trida realizujici posluchace pro veci. Posluchac
+ * zada controllera o prekresleni.
+ * @author Jindra
+ *
+ */
 public class veciObserver implements IObserver {
 	
 private HomeController c;
-	
+	/**
+	 * Konstruktor, kde se predava controller
+	 * @param controller
+	 */
 	veciObserver (HomeController controller){
 		c = controller;
 	}

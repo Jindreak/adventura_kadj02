@@ -6,6 +6,14 @@ import com.github.Jindreak.adventura_kadj02.logika.Batoh;
 import com.github.Jindreak.adventura_kadj02.logika.IHra;
 import com.github.Jindreak.adventura_kadj02.logika.Prostor;
 
+
+/**
+ * Hlavni publisher zmen v ramci navrhoveho
+ * vzoru Observer. Registruje vsechny posluchace
+ * a notifikuje je o zmenach
+ * @author Jindra
+ *
+ */
 public class Subject implements ISubject  {
 	
 	private ArrayList<IObserver> observers;
@@ -13,7 +21,11 @@ public class Subject implements ISubject  {
 	private Batoh batoh;
 	IHra odkazNaHru;
 	
-	
+	/**
+	 * Konstruktor, ktery z predane hry
+	 * vytahne aktualni prostor a batoh
+	 * @param hra
+	 */
 	public Subject(IHra hra) {
 		observers = new ArrayList<IObserver>();
 		odkazNaHru = hra;

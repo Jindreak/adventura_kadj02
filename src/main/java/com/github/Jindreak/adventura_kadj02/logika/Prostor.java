@@ -255,6 +255,7 @@ public class Prostor {
     
     /**
      * Odebira vec z prostoru na zaklade textoveho retezce, vraci odkaz na smazanou vec
+     * @param nazev stringovy nazev
      *
      * @return vec, ktera byla odebrana
      */
@@ -291,6 +292,7 @@ public class Prostor {
     
     /**
      * Meotda getPostava vrací jméno postavy pokud se nachází v prostoru
+     * @param jmeno stringovy nazev
      *
      * @return instance nalezené postavy
      */

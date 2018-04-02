@@ -43,13 +43,38 @@
 	    <archive>
 	      <manifest>
 	        <addClasspath>true</addClasspath>
-	        <mainClass>com.github.Jindreak.Start</mainClass>
+	        <mainClass>com.github.Jindreak.adventura_kadj02.ui.Application</mainClass>
 	      </manifest>
 	    </archive>
 	  </configuration>
 	</plugin>
+	
+	<plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>com.github.Jindreak.adventura_kadj02.ui.Application</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+      <executions>
+        <execution>
+          <id>make-assembly</id> 
+          <phase>package</phase> <!-- packaging phase -->
+          <goals>
+            <goal>single</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
 
   </plugins>
 </build>
+
+
   
 </project>

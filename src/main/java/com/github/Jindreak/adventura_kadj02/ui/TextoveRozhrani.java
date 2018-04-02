@@ -20,6 +20,7 @@ public class TextoveRozhrani {
 
     /**
      *  Vytváří hru.
+     *  @param hra odkaz na instaci hry
      */
     public TextoveRozhrani(IHra hra) {
         this.hra = hra;
@@ -45,7 +46,10 @@ public class TextoveRozhrani {
 
         System.out.println(hra.vratEpilog());
     }
-    
+    /**
+     * stara metoda, hraj ze souboru
+     * @param soubor
+     */
     public void hrajZeSouboru(String soubor) {
         System.out.println("Nacitam prikazy ze souboru " + soubor);
         

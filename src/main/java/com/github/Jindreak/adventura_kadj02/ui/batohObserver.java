@@ -7,10 +7,22 @@ import com.github.Jindreak.adventura_kadj02.logika.Postava;
 import com.github.Jindreak.adventura_kadj02.logika.Prostor;
 import com.github.Jindreak.adventura_kadj02.logika.Vec;
 
+/**
+ * Trida realizujici posluchace pro batoh. Posluchac
+ * zada controllera o prekresleni.
+ * @author Jindra
+ *
+ */
+
 public class batohObserver implements IObserver {
 	
 	
 	private HomeController c;
+	
+	/**
+	 * Konstruktor, kde se predava controller
+	 * @param controller
+	 */
 	
 	batohObserver (HomeController controller) {
 		c = controller;

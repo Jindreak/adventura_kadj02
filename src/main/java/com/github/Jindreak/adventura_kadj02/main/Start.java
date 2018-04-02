@@ -6,7 +6,7 @@ package com.github.Jindreak.adventura_kadj02.main;
 
 
 import com.github.Jindreak.adventura_kadj02.logika.*;
-import com.github.Jindreak.adventura_kadj02.uiText.TextoveRozhrani;
+import com.github.Jindreak.adventura_kadj02.ui.TextoveRozhrani;
 
 /*******************************************************************************
  * Třída  Start je hlavní třídou projektu,

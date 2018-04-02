@@ -1,5 +1,9 @@
 package com.github.Jindreak.adventura_kadj02.ui;
-
+/**
+ * Interface subjectu, pro prehlednost
+ * @author Jindra
+ *
+ */
 public interface ISubject  {
 
 	/**

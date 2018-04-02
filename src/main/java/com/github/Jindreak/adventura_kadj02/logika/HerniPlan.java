@@ -136,6 +136,7 @@ public class HerniPlan {
     /**
      *  Metoda vrací odkaz na prostor specifikován textem
      *
+     *@param nazevProstoru nazev prostoru
      *@return prostor, která se rovná textu
      */
     

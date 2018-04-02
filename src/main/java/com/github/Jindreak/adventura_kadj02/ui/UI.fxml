@@ -37,9 +37,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="Hra">
             <items>
-              <MenuItem fx:id="nova_hra" mnemonicParsing="false" text="Nova hra" />
-                  <MenuItem fx:id="napoveda" mnemonicParsing="false" text="Napoveda" />
-                  <MenuItem fx:id="konec" mnemonicParsing="false" text="Konec" />
+              <MenuItem fx:id="nova_hra" mnemonicParsing="false" onAction="#novaHra" text="Nova hra" />
+                  <MenuItem fx:id="napoveda" mnemonicParsing="false" onAction="#napovedaHtml" text="Napoveda" />
+                  <MenuItem fx:id="konec" mnemonicParsing="false" onAction="#konec" text="Konec" />
             </items>
           </Menu>
         </menus>

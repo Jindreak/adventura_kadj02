@@ -2,7 +2,12 @@ package com.github.Jindreak.adventura_kadj02.ui;
 
 import com.github.Jindreak.adventura_kadj02.logika.Batoh;
 import com.github.Jindreak.adventura_kadj02.logika.Prostor;
-
+/**
+ * Interface observera, ktery musi implementovat
+ * vsichni posluchaci
+ * @author Jindra
+ *
+ */
 public interface IObserver {
 	
 	/**
